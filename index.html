@@ -18,26 +18,18 @@
     body {
       margin: 0;
       min-height: 100vh;
-
       font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-
-      color: #d9fff4;
+      color: #d9f6ff;
 
       background:
-        radial-gradient(circle at 10% 20%, rgba(0, 255, 180, 0.10), transparent 28%),
-        radial-gradient(circle at 90% 15%, rgba(0, 180, 160, 0.10), transparent 30%),
-        radial-gradient(circle at 70% 85%, rgba(0, 255, 150, 0.07), transparent 30%),
-        linear-gradient(135deg, #020706, #04110e, #061815, #020807);
+        radial-gradient(circle at 10% 20%, rgba(0, 180, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(0, 140, 210, 0.12), transparent 30%),
+        radial-gradient(circle at 70% 85%, rgba(0, 210, 220, 0.08), transparent 30%),
+        linear-gradient(135deg, #02070b, #04121a, #061923, #02090f);
 
       background-attachment: fixed;
-
       overflow-x: hidden;
     }
-
-
-    /* --------------------------------------------------
-       Futuristic grid background
-    -------------------------------------------------- */
 
     body::before {
       content: "";
@@ -46,69 +38,49 @@
       z-index: -3;
 
       background-image:
-        linear-gradient(rgba(0, 255, 190, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 190, 0.035) 1px, transparent 1px);
+        linear-gradient(rgba(0, 190, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 190, 255, 0.04) 1px, transparent 1px);
 
       background-size: 42px 42px;
-
-      mask-image:
-        linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 90%);
     }
-
-
-    /* --------------------------------------------------
-       Floating glow objects
-    -------------------------------------------------- */
 
     .bubble {
       position: fixed;
-
       border-radius: 50%;
-
       filter: blur(25px);
-
       z-index: -2;
-
       animation: float 8s ease-in-out infinite;
     }
 
     .bubble.one {
       width: 240px;
       height: 240px;
-
       top: 8%;
       left: 2%;
-
-      background: rgba(0, 255, 190, 0.10);
+      background: rgba(0, 180, 255, 0.11);
     }
 
     .bubble.two {
       width: 300px;
       height: 300px;
-
       right: 2%;
       top: 40%;
-
-      background: rgba(0, 210, 170, 0.08);
-
+      background: rgba(0, 140, 220, 0.09);
       animation-delay: 2s;
     }
 
     .bubble.three {
       width: 200px;
       height: 200px;
-
       bottom: 5%;
       left: 20%;
-
-      background: rgba(0, 255, 130, 0.08);
-
+      background: rgba(0, 210, 220, 0.08);
       animation-delay: 4s;
     }
 
     @keyframes float {
       0%, 100% {
-        transform: translateY(0px);
+        transform: translateY(0);
       }
 
       50% {
@@ -116,147 +88,104 @@
       }
     }
 
-
-    /* --------------------------------------------------
-       Header
-    -------------------------------------------------- */
-
     header {
       text-align: center;
-
       padding: 80px 20px 45px;
     }
 
     .badge {
       display: inline-block;
-
       padding: 8px 17px;
       margin-bottom: 20px;
-
       border-radius: 30px;
 
-      background: rgba(0, 255, 190, 0.08);
+      background: rgba(0, 170, 255, 0.08);
+      border: 1px solid rgba(70, 205, 255, 0.30);
 
-      border:
-        1px solid rgba(64, 255, 204, 0.30);
-
-      color: #66ffd5;
-
+      color: #7ddfff;
       font-size: 0.82rem;
       font-weight: 700;
-
       letter-spacing: 2px;
 
-      box-shadow:
-        0 0 25px rgba(0, 255, 180, 0.09);
-
+      box-shadow: 0 0 25px rgba(0, 180, 255, 0.10);
       backdrop-filter: blur(10px);
     }
 
     header h1 {
       margin: 0;
-
       font-size: clamp(2.5rem, 6vw, 4.7rem);
-
       font-weight: 800;
-
       letter-spacing: -2px;
 
       background:
         linear-gradient(
           90deg,
-          #7bffe0,
-          #19e6b3,
-          #00ffa6,
-          #62ffd2
+          #8be8ff,
+          #37c8ff,
+          #00bde8,
+          #68e5ff
         );
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
       background-clip: text;
 
       filter:
-        drop-shadow(0 0 18px rgba(0, 255, 177, 0.15));
+        drop-shadow(0 0 18px rgba(0, 190, 255, 0.18));
     }
 
     header p {
       max-width: 780px;
-
       margin: 22px auto 0;
-
-      color: #94c9bb;
-
+      color: #9fc8d6;
       font-size: 1.05rem;
-
       line-height: 1.8;
     }
 
-
-    /* --------------------------------------------------
-       Search
-    -------------------------------------------------- */
-
     .search-wrapper {
       max-width: 680px;
-
       margin: 36px auto 0;
-
       padding: 6px;
 
       border-radius: 19px;
 
-      background:
-        rgba(7, 27, 23, 0.75);
-
-      border:
-        1px solid rgba(0, 255, 190, 0.22);
+      background: rgba(7, 22, 30, 0.78);
+      border: 1px solid rgba(0, 190, 255, 0.22);
 
       box-shadow:
-        0 0 30px rgba(0, 255, 170, 0.08);
+        0 0 30px rgba(0, 180, 255, 0.08);
 
       backdrop-filter: blur(14px);
     }
 
     #search {
       width: 100%;
-
       padding: 16px 20px;
 
       border: none;
       outline: none;
-
       border-radius: 14px;
 
-      background:
-        rgba(2, 13, 11, 0.92);
-
-      color: #caffef;
+      background: rgba(2, 12, 18, 0.94);
+      color: #d5f5ff;
 
       font-size: 1rem;
 
-      transition:
-        box-shadow 0.2s ease;
+      transition: box-shadow 0.2s ease;
     }
 
     #search:focus {
       box-shadow:
-        0 0 0 1px rgba(0, 255, 190, 0.4),
-        0 0 20px rgba(0, 255, 190, 0.08);
+        0 0 0 1px rgba(0, 190, 255, 0.45),
+        0 0 20px rgba(0, 180, 255, 0.10);
     }
 
     #search::placeholder {
-      color: #658f84;
+      color: #6f96a5;
     }
-
-
-    /* --------------------------------------------------
-       Main layout
-    -------------------------------------------------- */
 
     main {
       width: min(1150px, 92%);
-
       margin: 20px auto 80px;
     }
 
@@ -266,17 +195,13 @@
 
     .section-title {
       display: flex;
-
       align-items: center;
-
       gap: 12px;
-
       margin-bottom: 20px;
     }
 
     .section-icon {
       display: flex;
-
       align-items: center;
       justify-content: center;
 
@@ -285,45 +210,30 @@
 
       border-radius: 12px;
 
-      background:
-        rgba(0, 255, 190, 0.08);
-
-      border:
-        1px solid rgba(0, 255, 190, 0.15);
+      background: rgba(0, 180, 255, 0.09);
+      border: 1px solid rgba(0, 190, 255, 0.16);
 
       box-shadow:
-        0 0 14px rgba(0, 255, 180, 0.05);
+        0 0 14px rgba(0, 180, 255, 0.06);
 
       font-size: 1.2rem;
     }
 
     h2 {
       margin: 0;
-
-      color: #a8ffe8;
-
+      color: #bceeff;
       font-size: 1.45rem;
     }
 
-
-    /* --------------------------------------------------
-       Resource cards
-    -------------------------------------------------- */
-
     .resource-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(270px, 1fr));
-
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       gap: 20px;
     }
 
     .resource {
       position: relative;
-
       padding: 24px;
-
       overflow: hidden;
 
       border-radius: 20px;
@@ -331,12 +241,11 @@
       background:
         linear-gradient(
           145deg,
-          rgba(8, 31, 27, 0.80),
-          rgba(3, 20, 17, 0.78)
+          rgba(8, 27, 36, 0.84),
+          rgba(3, 17, 24, 0.82)
         );
 
-      border:
-        1px solid rgba(0, 255, 190, 0.13);
+      border: 1px solid rgba(0, 190, 255, 0.14);
 
       backdrop-filter: blur(16px);
 
@@ -351,7 +260,6 @@
 
     .resource::before {
       content: "";
-
       position: absolute;
 
       top: 0;
@@ -364,8 +272,8 @@
         linear-gradient(
           90deg,
           transparent,
-          #00ffa6,
-          #68ffdc,
+          #00bff3,
+          #6ee7ff,
           transparent
         );
 
@@ -375,14 +283,13 @@
     }
 
     .resource:hover {
-      transform:
-        translateY(-6px);
+      transform: translateY(-6px);
 
       border-color:
-        rgba(0, 255, 190, 0.32);
+        rgba(0, 190, 255, 0.34);
 
       box-shadow:
-        0 18px 45px rgba(0, 255, 180, 0.08);
+        0 18px 45px rgba(0, 180, 255, 0.10);
     }
 
     .resource:hover::before {
@@ -390,77 +297,48 @@
     }
 
     .resource h3 {
-      margin:
-        0 0 10px;
-
-      color:
-        #c7fff0;
-
-      font-size:
-        1.12rem;
+      margin: 0 0 10px;
+      color: #d3f5ff;
+      font-size: 1.12rem;
     }
 
     .resource p {
       min-height: 75px;
+      margin: 0 0 20px;
 
-      margin:
-        0 0 20px;
+      color: #90b7c5;
 
-      color:
-        #8bb8ac;
-
-      font-size:
-        0.94rem;
-
-      line-height:
-        1.65;
+      font-size: 0.94rem;
+      line-height: 1.65;
     }
 
-
-    /* --------------------------------------------------
-       Cyber buttons
-    -------------------------------------------------- */
-
     .resource a {
-      display:
-        inline-flex;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
 
-      align-items:
-        center;
+      padding: 10px 15px;
 
-      gap:
-        8px;
-
-      padding:
-        10px 15px;
-
-      border-radius:
-        10px;
+      border-radius: 10px;
 
       background:
         linear-gradient(
           135deg,
-          #00b88c,
-          #00dd9f
+          #009fd6,
+          #00c7dd
         );
 
-      color:
-        #001a13;
+      color: #001218;
 
-      font-size:
-        0.88rem;
+      font-size: 0.88rem;
+      font-weight: 800;
 
-      font-weight:
-        800;
+      text-decoration: none;
 
-      text-decoration:
-        none;
-
-      letter-spacing:
-        0.3px;
+      letter-spacing: 0.3px;
 
       box-shadow:
-        0 8px 20px rgba(0, 221, 159, 0.15);
+        0 8px 20px rgba(0, 185, 230, 0.18);
 
       transition:
         transform 0.2s ease,
@@ -469,116 +347,73 @@
     }
 
     .resource a:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
       background:
         linear-gradient(
           135deg,
-          #31ffc5,
-          #00d69a
+          #3ed9ff,
+          #00bdd6
         );
 
       box-shadow:
-        0 10px 25px rgba(0, 255, 180, 0.25);
+        0 10px 25px rgba(0, 190, 255, 0.28);
     }
 
     .resource a::after {
-      content:
-        "↗";
-
-      font-size:
-        1rem;
+      content: "↗";
+      font-size: 1rem;
     }
-
-
-    /* --------------------------------------------------
-       No search results
-    -------------------------------------------------- */
 
     #no-results {
-      display:
-        none;
+      display: none;
+      text-align: center;
+      padding: 45px;
 
-      text-align:
-        center;
-
-      padding:
-        45px;
-
-      color:
-        #73b9a8;
-
-      font-size:
-        1.05rem;
+      color: #7fb6c7;
+      font-size: 1.05rem;
     }
 
-
-    /* --------------------------------------------------
-       Footer
-    -------------------------------------------------- */
-
     footer {
-      text-align:
-        center;
+      text-align: center;
+      padding: 35px 20px;
 
-      padding:
-        35px 20px;
-
-      color:
-        #527e72;
-
-      font-size:
-        0.9rem;
+      color: #5e8795;
+      font-size: 0.9rem;
 
       border-top:
-        1px solid rgba(0, 255, 190, 0.06);
+        1px solid rgba(0, 190, 255, 0.07);
     }
 
     .footer-symbol {
-      color:
-        #00e6aa;
+      color: #00bfe8;
     }
 
-
-    /* --------------------------------------------------
-       Mobile
-    -------------------------------------------------- */
-
     @media (max-width: 600px) {
-
       header {
-        padding-top:
-          55px;
+        padding-top: 55px;
       }
 
       header h1 {
-        letter-spacing:
-          -1px;
+        letter-spacing: -1px;
       }
 
       .resource {
-        padding:
-          20px;
+        padding: 20px;
       }
 
       .resource p {
-        min-height:
-          auto;
+        min-height: auto;
       }
-
     }
-
   </style>
 </head>
-
 
 <body>
 
 <div class="bubble one"></div>
 <div class="bubble two"></div>
 <div class="bubble three"></div>
-
 
 <header>
 
@@ -596,28 +431,23 @@
   </p>
 
   <div class="search-wrapper">
-
     <input
       type="text"
       id="search"
       placeholder="⌕ Search the data network..."
       onkeyup="filterResources()"
     >
-
   </div>
 
 </header>
 
-
 <main>
-
 
   <!-- GENERAL DATA -->
 
   <section>
 
     <div class="section-title">
-
       <div class="section-icon">
         ◈
       </div>
@@ -625,18 +455,12 @@
       <h2>
         General & Public Data
       </h2>
-
     </div>
-
 
     <div class="resource-grid">
 
-
       <div class="resource">
-
-        <h3>
-          Data.gov
-        </h3>
+        <h3>Data.gov</h3>
 
         <p>
           The U.S. government's central open-data portal with datasets
@@ -650,15 +474,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          Data Liberation Project
-        </h3>
+        <h3>Data Liberation Project</h3>
 
         <p>
           A public-interest project obtaining and publishing government
@@ -672,15 +492,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          Beautiful Public Data
-        </h3>
+        <h3>Beautiful Public Data</h3>
 
         <p>
           A collection highlighting fascinating and visually compelling
@@ -694,15 +510,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          Information Is Beautiful
-        </h3>
+        <h3>Information Is Beautiful</h3>
 
         <p>
           Data resources useful for visualization, infographics,
@@ -716,9 +528,7 @@
         >
           Access Data
         </a>
-
       </div>
-
 
     </div>
 
@@ -730,7 +540,6 @@
   <section>
 
     <div class="section-title">
-
       <div class="section-icon">
         ⌖
       </div>
@@ -738,18 +547,12 @@
       <h2>
         Florida & Miami-Dade Data
       </h2>
-
     </div>
-
 
     <div class="resource-grid">
 
-
       <div class="resource">
-
-        <h3>
-          Florida Geospatial Open Data
-        </h3>
+        <h3>Florida Geospatial Open Data</h3>
 
         <p>
           Florida geographic datasets including boundaries,
@@ -763,15 +566,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          Miami-Dade County GIS Open Data
-        </h3>
+        <h3>Miami-Dade County GIS Open Data</h3>
 
         <p>
           Geographic, planning, infrastructure, demographic,
@@ -785,9 +584,7 @@
         >
           Access Data
         </a>
-
       </div>
-
 
     </div>
 
@@ -799,7 +596,6 @@
   <section>
 
     <div class="section-title">
-
       <div class="section-icon">
         ▤
       </div>
@@ -807,18 +603,12 @@
       <h2>
         Economic & Labor Data
       </h2>
-
     </div>
-
 
     <div class="resource-grid">
 
-
       <div class="resource">
-
-        <h3>
-          U.S. Bureau of Labor Statistics
-        </h3>
+        <h3>U.S. Bureau of Labor Statistics</h3>
 
         <p>
           Official U.S. statistics covering employment, wages,
@@ -832,15 +622,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          World Bank Open Data
-        </h3>
+        <h3>World Bank Open Data</h3>
 
         <p>
           Global indicators covering economics, population, poverty,
@@ -854,9 +640,7 @@
         >
           Access Data
         </a>
-
       </div>
-
 
     </div>
 
@@ -868,7 +652,6 @@
   <section>
 
     <div class="section-title">
-
       <div class="section-icon">
         ◫
       </div>
@@ -876,18 +659,12 @@
       <h2>
         Education & Academic Data
       </h2>
-
     </div>
-
 
     <div class="resource-grid">
 
-
       <div class="resource">
-
-        <h3>
-          FIU Libraries Databases
-        </h3>
+        <h3>FIU Libraries Databases</h3>
 
         <p>
           FIU library resources for scholarly research, statistics,
@@ -901,15 +678,11 @@
         >
           Access Resources
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          National Center for Education Statistics
-        </h3>
+        <h3>National Center for Education Statistics</h3>
 
         <p>
           U.S. education datasets covering schools, colleges,
@@ -923,9 +696,7 @@
         >
           Access Data
         </a>
-
       </div>
-
 
     </div>
 
@@ -937,7 +708,6 @@
   <section>
 
     <div class="section-title">
-
       <div class="section-icon">
         ◎
       </div>
@@ -945,18 +715,12 @@
       <h2>
         International & Global Data
       </h2>
-
     </div>
-
 
     <div class="resource-grid">
 
-
       <div class="resource">
-
-        <h3>
-          Our World in Data
-        </h3>
+        <h3>Our World in Data</h3>
 
         <p>
           Global research and datasets covering health, population,
@@ -970,15 +734,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          United Nations SDG Data Portal
-        </h3>
+        <h3>United Nations SDG Data Portal</h3>
 
         <p>
           International indicators for the United Nations Sustainable
@@ -992,15 +752,11 @@
         >
           Access Data
         </a>
-
       </div>
 
 
       <div class="resource">
-
-        <h3>
-          Humanitarian Data Exchange
-        </h3>
+        <h3>Humanitarian Data Exchange</h3>
 
         <p>
           Humanitarian datasets covering conflict, disasters,
@@ -1014,9 +770,7 @@
         >
           Access Data
         </a>
-
       </div>
-
 
     </div>
 
@@ -1027,18 +781,15 @@
     No matching data sources were found.
   </div>
 
-
 </main>
 
 
 <footer>
-
   <span class="footer-symbol">
     &lt;/&gt;
   </span>
 
   Data Resource Network
-
 </footer>
 
 
@@ -1063,16 +814,12 @@ function filterResources() {
     const text =
       resource.textContent.toLowerCase();
 
-
     if (text.includes(search)) {
 
       resource.style.display = "block";
-
       found++;
 
-    }
-
-    else {
+    } else {
 
       resource.style.display = "none";
 
@@ -1090,25 +837,20 @@ function filterResources() {
     const cards =
       section.querySelectorAll(".resource");
 
-    let visible =
-      false;
+    let visible = false;
 
 
     cards.forEach(function(card) {
 
       if (card.style.display !== "none") {
-
         visible = true;
-
       }
 
     });
 
 
     section.style.display =
-      visible
-        ? "block"
-        : "none";
+      visible ? "block" : "none";
 
   });
 
@@ -1117,14 +859,11 @@ function filterResources() {
     .getElementById("no-results")
     .style
     .display =
-      found === 0
-        ? "block"
-        : "none";
+      found === 0 ? "block" : "none";
 
 }
 
 </script>
-
 
 </body>
 </html>
