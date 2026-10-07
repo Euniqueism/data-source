@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Recommended Data Sources</title>
 
   <style>
@@ -11,324 +10,382 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      min-height: 100vh;
-
-      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-
-      color: #1f2d3d;
-      background: #f5f7fa;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #243447;
     }
-
-    /* ------------------------------
-       Header
-    ------------------------------ */
 
     header {
-      background: linear-gradient(
-        135deg,
-        #0f2742,
-        #173d63
-      );
-
+      background: linear-gradient(135deg, #17365d, #2e5f88);
       color: white;
-
-      padding: 70px 20px 55px;
-
       text-align: center;
-
-      border-bottom: 5px solid #2f7d8c;
-    }
-
-    .badge {
-      display: inline-block;
-
-      margin-bottom: 18px;
-      padding: 7px 15px;
-
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 4px;
-
-      color: #d9edf4;
-
-      font-size: 0.78rem;
-      font-weight: 700;
-
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      padding: 60px 20px 45px;
     }
 
     header h1 {
       margin: 0;
-
       font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(2.5rem, 6vw, 4.3rem);
-
-      font-weight: 700;
-
-      letter-spacing: -1px;
+      font-size: 3rem;
     }
 
     header p {
-      max-width: 780px;
-
-      margin: 20px auto 0;
-
-      color: #d9e4ee;
-
-      font-size: 1.05rem;
-
-      line-height: 1.8;
+      max-width: 760px;
+      margin: 18px auto 0;
+      line-height: 1.7;
+      color: #e4edf5;
     }
 
-    /* ------------------------------
-       Search
-    ------------------------------ */
-
-    .search-wrapper {
-      max-width: 680px;
-
-      margin: 35px auto 0;
-
-      background: white;
-
-      padding: 5px;
-
-      border-radius: 7px;
-
-      box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.18);
+    .search-box {
+      max-width: 650px;
+      margin: 30px auto 0;
     }
 
     #search {
       width: 100%;
-
       padding: 15px 18px;
-
-      border: 1px solid #ccd6df;
-      border-radius: 5px;
-
-      outline: none;
-
-      background: white;
-
-      color: #25364a;
-
       font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      outline: none;
     }
-
-    #search:focus {
-      border-color: #2f7d8c;
-
-      box-shadow:
-        0 0 0 3px rgba(47, 125, 140, 0.12);
-    }
-
-    #search::placeholder {
-      color: #8997a5;
-    }
-
-    /* ------------------------------
-       Main page
-    ------------------------------ */
 
     main {
-      width: min(1120px, 92%);
-
-      margin: 55px auto 80px;
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px;
     }
 
     section {
-      margin-bottom: 55px;
-    }
-
-    .section-title {
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-      margin-bottom: 20px;
-
-      padding-bottom: 10px;
-
-      border-bottom: 2px solid #cfd8e2;
-    }
-
-    .section-icon {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      width: 38px;
-      height: 38px;
-
-      border-radius: 4px;
-
-      background: #e3edf2;
-
-      color: #24586b;
-
-      font-weight: bold;
+      margin-bottom: 50px;
     }
 
     h2 {
-      margin: 0;
-
       font-family: Georgia, "Times New Roman", serif;
-
-      color: #173d63;
-
-      font-size: 1.5rem;
+      color: #17365d;
+      border-bottom: 2px solid #c8d3dc;
+      padding-bottom: 10px;
     }
-
-    /* ------------------------------
-       Resource cards
-    ------------------------------ */
 
     .resource-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(270px, 1fr));
-
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
     .resource {
-      position: relative;
-
-      padding: 24px;
-
-      background: #ffffff;
-
-      border: 1px solid #d8e0e7;
-
-      border-radius: 6px;
-
-      box-shadow:
-        0 4px 14px rgba(30, 50, 70, 0.07);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .resource::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 4px;
-
-      background: #2f7d8c;
-
-      border-radius: 6px 6px 0 0;
-
-      opacity: 0;
-
-      transition: opacity 0.2s ease;
-    }
-
-    .resource:hover {
-      transform: translateY(-4px);
-
-      border-color: #b8c8d5;
-
-      box-shadow:
-        0 9px 22px rgba(30, 50, 70, 0.12);
-    }
-
-    .resource:hover::before {
-      opacity: 1;
+      background: white;
+      border: 1px solid #d7dfe6;
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
     .resource h3 {
-      margin: 0 0 10px;
-
-      color: #173d63;
-
-      font-size: 1.08rem;
+      margin-top: 0;
+      color: #17365d;
     }
 
     .resource p {
-      min-height: 75px;
-
-      margin: 0 0 20px;
-
       color: #5d6b78;
-
-      font-size: 0.94rem;
-
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
-    /* ------------------------------
-       Links / Buttons
-    ------------------------------ */
-
     .resource a {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 7px;
-
+      display: inline-block;
+      margin-top: 8px;
       padding: 9px 14px;
-
-      border-radius: 4px;
-
-      background: #173d63;
-
-      color: #ffffff;
-
-      font-size: 0.88rem;
-      font-weight: 600;
-
+      background: #17365d;
+      color: white;
       text-decoration: none;
-
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+      border-radius: 5px;
+      font-weight: bold;
     }
 
     .resource a:hover {
       background: #2f7d8c;
-
-      transform: translateY(-1px);
     }
-
-    .resource a::after {
-      content: "↗";
-    }
-
-    /* ------------------------------
-       Search no results
-    ------------------------------ */
 
     #no-results {
       display: none;
-
-      padding: 45px;
-
       text-align: center;
-
+      padding: 40px;
       color: #667788;
-
-      font-size: 1.05rem;
     }
 
-    /* ----------------
+    footer {
+      margin-top: 50px;
+      background: #e4e9ee;
+      color: #657483;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Recommended Data Sources</h1>
+
+  <p>
+    A curated collection of trusted public, academic, government,
+    geographic, economic, and international data sources for research,
+    visualization, data storytelling, and class projects.
+  </p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="search"
+      placeholder="Search data sources..."
+    >
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>General & Public Data</h2>
+
+    <div class="resource-grid">
+
+      <div class="resource">
+        <h3>Data.gov</h3>
+        <p>
+          The U.S. government's central open-data portal with datasets
+          from federal, state, and local agencies.
+        </p>
+        <a href="https://data.gov/" target="_blank">Access Data</a>
+      </div>
+
+      <div class="resource">
+        <h3>Data Liberation Project</h3>
+        <p>
+          A public-interest project obtaining and publishing government
+          datasets that can otherwise be difficult to access.
+        </p>
+        <a href="https://www.data-liberation-project.org/datasets/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>Beautiful Public Data</h3>
+        <p>
+          A collection highlighting fascinating and visually compelling
+          public datasets.
+        </p>
+        <a href="https://www.beautifulpublicdata.com/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>Information Is Beautiful</h3>
+        <p>
+          Data resources useful for visualization, infographics,
+          exploratory analysis, and data storytelling.
+        </p>
+        <a href="https://informationisbeautiful.net/data/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Florida & Miami-Dade Data</h2>
+
+    <div class="resource-grid">
+
+      <div class="resource">
+        <h3>Florida Geospatial Open Data</h3>
+        <p>
+          Florida geographic datasets including boundaries,
+          infrastructure, environmental information, maps, and GIS resources.
+        </p>
+        <a href="https://geodata.floridagio.gov/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>Miami-Dade County GIS Open Data</h3>
+        <p>
+          Geographic, planning, infrastructure, demographic,
+          and local government datasets for Miami-Dade County.
+        </p>
+        <a href="https://gis-mdc.opendata.arcgis.com/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Economic & Labor Data</h2>
+
+    <div class="resource-grid">
+
+      <div class="resource">
+        <h3>U.S. Bureau of Labor Statistics</h3>
+        <p>
+          Official U.S. statistics covering employment, wages,
+          unemployment, inflation, occupations, and productivity.
+        </p>
+        <a href="https://www.bls.gov/data/home.htm" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>World Bank Open Data</h3>
+        <p>
+          Global indicators covering economics, population, poverty,
+          education, health, infrastructure, and international development.
+        </p>
+        <a href="https://data.worldbank.org/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Education & Academic Data</h2>
+
+    <div class="resource-grid">
+
+      <div class="resource">
+        <h3>FIU Libraries Databases</h3>
+        <p>
+          FIU library resources for scholarly research, statistics,
+          publications, and specialized academic databases.
+        </p>
+        <a href="https://library.fiu.edu/az/databases?t=6958" target="_blank">
+          Access Resources
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>National Center for Education Statistics</h3>
+        <p>
+          U.S. education datasets covering schools, colleges,
+          enrollment, demographics, and student outcomes.
+        </p>
+        <a href="https://nces.ed.gov/use-work/data-tools" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>International & Global Data</h2>
+
+    <div class="resource-grid">
+
+      <div class="resource">
+        <h3>Our World in Data</h3>
+        <p>
+          Global research and datasets covering health, population,
+          economics, environment, technology, education, and society.
+        </p>
+        <a href="https://ourworldindata.org/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>United Nations SDG Data Portal</h3>
+        <p>
+          International indicators for the United Nations Sustainable
+          Development Goals.
+        </p>
+        <a href="https://unstats.un.org/sdgs/dataportal/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+      <div class="resource">
+        <h3>Humanitarian Data Exchange</h3>
+        <p>
+          Humanitarian datasets covering conflict, disasters,
+          displacement, health, food security, and populations.
+        </p>
+        <a href="https://data.humdata.org/" target="_blank">
+          Access Data
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="no-results">
+    No matching data sources were found.
+  </div>
+
+</main>
+
+<footer>
+  Recommended Data Sources
+</footer>
+
+
+<script>
+  const searchInput = document.getElementById("search");
+
+  searchInput.addEventListener("input", function () {
+    const searchText = searchInput.value.toLowerCase().trim();
+    const resources = document.querySelectorAll(".resource");
+    const sections = document.querySelectorAll("main section");
+
+    let totalVisible = 0;
+
+    resources.forEach(function (resource) {
+      const content = resource.textContent.toLowerCase();
+
+      if (content.includes(searchText)) {
+        resource.style.display = "";
+        totalVisible++;
+      } else {
+        resource.style.display = "none";
+      }
+    });
+
+    sections.forEach(function (section) {
+      const cards = section.querySelectorAll(".resource");
+      let visibleCards = 0;
+
+      cards.forEach(function (card) {
+        if (card.style.display !== "none") {
+          visibleCards++;
+        }
+      });
+
+      section.style.display = visibleCards > 0 ? "" : "none";
+    });
+
+    document.getElementById("no-results").style.display =
+      totalVisible === 0 ? "block" : "none";
+  });
+</script>
+
+</body>
+</html>
